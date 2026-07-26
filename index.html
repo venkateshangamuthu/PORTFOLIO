@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Venkatesh A | 3D Full-Stack Portfolio & Software Engineer</title>
+  <meta name="description" content="Portfolio of Venkatesh A - B.Tech CSBS 3rd Year at KIT, Full-Stack Developer specializing in Java, Spring Boot, React, MERN Stack, and Data Structures & Algorithms." />
+  
+  <!-- Favicon & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- 3D Three.js Background Canvas Container -->
+  <div id="canvas-container"></div>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="logo">
+        <div class="logo-icon">V</div>
+        <span>Venkatesh<span class="gradient-text">.dev</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#resume" class="nav-link">Resume</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="./assets/Venkatesh_A_Resume (1).pdf" download="Venkatesh_A_Resume.pdf" class="btn btn-outline btn-sm">
+          <i class="fas fa-download"></i> Resume PDF
+        </a>
+        <a href="#contact" class="btn btn-primary btn-sm">Let's Talk</a>
+      </div>
+
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAVIGATION MENU -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#home" class="nav-link mobile-nav-link">Home</a>
+    <a href="#about" class="nav-link mobile-nav-link">About</a>
+    <a href="#experience" class="nav-link mobile-nav-link">Experience</a>
+    <a href="#projects" class="nav-link mobile-nav-link">Projects</a>
+    <a href="#skills" class="nav-link mobile-nav-link">Skills</a>
+    <a href="#resume" class="nav-link mobile-nav-link">Resume</a>
+    <a href="#contact" class="nav-link mobile-nav-link">Contact</a>
+    <a href="./assets/Venkatesh_A_Resume (1).pdf" download="Venkatesh_A_Resume.pdf" class="btn btn-primary">
+      <i class="fas fa-download"></i> Download Resume
+    </a>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <i class="fas fa-circle"></i> Open to Software Engineering Internships & Roles
+        </div>
+
+        <h1 class="hero-title">
+          Hi, I'm <span class="gradient-text">Venkatesh A</span>
+        </h1>
+
+        <div class="typing-container">
+          <span>I build </span>
+          <span id="dynamic-typing"></span>
+          <span class="typing-cursor"></span>
+        </div>
+
+        <p class="hero-bio">
+          CSBS Undergraduate (3rd Year, CGPA 8.42/10.0) at Kalaignar Karunanidhi Institute of Technology. 
+          Specializing in full-stack development with <strong>Java / Spring Boot</strong> and the <strong>MERN Stack</strong>. 
+          Solved <strong>550+ LeetCode</strong> problems (Top 23.32% globally) with NPTEL Silver Medalist certification in Java.
+        </p>
+
+        <div class="hero-pills">
+          <span class="tech-pill"><i class="fab fa-java"></i> Java & Spring Boot</span>
+          <span class="tech-pill"><i class="fab fa-react"></i> React.js</span>
+          <span class="tech-pill"><i class="fab fa-node-js"></i> Node.js & Express</span>
+          <span class="tech-pill"><i class="fas fa-database"></i> MongoDB & MySQL</span>
+          <span class="tech-pill"><i class="fas fa-code"></i> DSA (LeetCode 1601)</span>
+        </div>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">
+            Explore My Work <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="./assets/Venkatesh_A_Resume (1).pdf" target="_blank" class="btn btn-outline">
+            <i class="fas fa-file-pdf"></i> View Resume PDF
+          </a>
+        </div>
+
+        <div class="social-links">
+          <a href="https://linkedin.com/in/venkateshangamuthu" target="_blank" class="social-icon" title="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/venkateshangamuthu" target="_blank" class="social-icon" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://x.com/VENKATESHA28418" target="_blank" class="social-icon" title="X (Twitter)">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+          <a href="mailto:iamvenkateshvk@gmail.com" class="social-icon" title="Email Me">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- 3D Profile Photo Card -->
+      <div class="profile-card-3d" data-tilt>
+        <div class="card-glare"></div>
+        <div class="profile-img-wrap">
+          <img src="./assets/venkatesh photo.jpg" alt="Venkatesh A Photo" />
+        </div>
+        <div class="profile-card-badge">
+          <div>
+            <h4>Venkatesh A</h4>
+            <p>Full-Stack Engineer</p>
+          </div>
+          <span class="tech-pill" style="margin: 0; background: rgba(6, 182, 212, 0.2); border-color: var(--accent-cyan);">
+            KIT '28
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK STATS BAR -->
+  <section id="quick-stats" class="stats-bar">
+    <div class="container stats-grid">
+      <div class="stat-item">
+        <div class="stat-number" data-target="550" data-suffix="+">0</div>
+        <div class="stat-label">LeetCode Problems Solved</div>
+      </div>
+
+      <div class="stat-item">
+        <div class="stat-number" data-target="8.42" data-decimals="2" data-suffix=" / 10">0</div>
+        <div class="stat-label">Current CGPA @ KIT</div>
+      </div>
+
+      <div class="stat-item">
+        <div class="stat-number" data-target="1601" data-suffix=" Rating">0</div>
+        <div class="stat-label">Max LeetCode Rating (Top 23.3%)</div>
+      </div>
+
+      <div class="stat-item">
+        <div class="stat-number" data-target="2" data-suffix=" Internships">0</div>
+        <div class="stat-label">Industry Experience</div>
+      </div>
+
+      <div class="stat-item">
+        <div class="stat-number" data-target="7" data-suffix="+">0</div>
+        <div class="stat-label">Global Certifications</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT & EDUCATION SECTION -->
+  <section id="about">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-subtitle">// GET TO KNOW ME</span>
+        <h2 class="section-title">About & <span class="gradient-text">Background</span></h2>
+        <p class="section-desc">Passionate software developer dedicated to crafting scalable web applications and solving complex algorithmic challenges.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="glass-card">
+          <h3 class="skill-cat-title"><i class="fas fa-user-astronaut"></i> Engineering Profile</h3>
+          <p style="color: var(--text-muted); margin-bottom: 20px;">
+            I am a 3rd-year <strong>B.Tech Computer Science and Business Systems (CSBS)</strong> student at 
+            <strong>Kalaignar Karunanidhi Institute of Technology (KIT), Coimbatore</strong>. 
+            I possess strong hands-on experience in building production-grade web applications for real-world and social impact use-cases.
+          </p>
+          <p style="color: var(--text-muted); margin-bottom: 24px;">
+            With a solid foundation in Data Structures, Algorithms, RESTful API design, and Database Management, 
+            I thrive in agile environments where I can leverage technology to deliver intuitive, high-impact digital solutions.
+          </p>
+
+          <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+            <div class="skill-chip"><i class="fas fa-map-marker-alt"></i> Coimbatore, India</div>
+            <div class="skill-chip"><i class="fas fa-graduation-cap"></i> B.Tech CSBS (2024 - 2028)</div>
+            <div class="skill-chip"><i class="fas fa-award"></i> NPTEL Silver Medalist</div>
+          </div>
+        </div>
+
+        <div class="glass-card">
+          <h3 class="skill-cat-title"><i class="fas fa-university"></i> Education & Coursework</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">2024 – 2028 (3rd Year)</div>
+              <h4 class="timeline-title">B.Tech - Computer Science & Business Systems</h4>
+              <p class="timeline-company">Kalaignar Karunanidhi Institute of Technology (KIT), Coimbatore</p>
+              <p class="timeline-body">
+                <strong>CGPA: 8.42 / 10.0</strong><br />
+                <em>Core Coursework:</em> Data Structures & Algorithms, Computer Networks, Operating Systems, Database Management Systems (DBMS), Software Engineering.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK EXPERIENCE SECTION -->
+  <section id="experience" style="background: rgba(15, 23, 42, 0.3);">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-subtitle">// CAREER JOURNEY</span>
+        <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
+        <p class="section-desc">Hands-on internships delivering real-world web applications and client modules.</p>
+      </div>
+
+      <div class="glass-card" style="max-width: 900px; margin: 0 auto;">
+        <div class="timeline">
+          <!-- Internship 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">May 2026</div>
+            <h4 class="timeline-title">MERN Stack Development Intern</h4>
+            <p class="timeline-company"><i class="fas fa-building"></i> CIT College (Remote)</p>
+            <ul style="color: var(--text-muted); padding-left: 20px; font-size: 0.95rem;">
+              <li style="margin-bottom: 8px;">Developed adaptive, end-to-end web platforms using MongoDB, Express.js, React, and Node.js.</li>
+              <li style="margin-bottom: 8px;">Designed a full-stack charity platform enabling secure donations and donor account management.</li>
+              <li>Integrated graphical financial-transparency dashboards engineered with Power BI for donor auditing.</li>
+            </ul>
+          </div>
+
+          <!-- Internship 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">Dec 2025</div>
+            <h4 class="timeline-title">Full Stack Development Intern</h4>
+            <p class="timeline-company"><i class="fas fa-building"></i> Learnlogicify Technologies</p>
+            <ul style="color: var(--text-muted); padding-left: 20px; font-size: 0.95rem;">
+              <li style="margin-bottom: 8px;">Built responsive front-end client-facing modules using HTML5, CSS3, and JavaScript (ES6+).</li>
+              <li style="margin-bottom: 8px;">Collaborated using Git and GitHub for version control and team repository management.</li>
+              <li>Strengthened debugging and QA workflow by resolving critical issues during the development cycle.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SHOWCASE SECTION -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-subtitle">// PORTFOLIO SHOWCASE</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        <p class="section-desc">Production-grade full-stack applications engineered for e-commerce, AI automation, and healthcare.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: E-Kart -->
+        <div class="project-card" data-tilt>
+          <div class="card-glare"></div>
+          <div class="project-img-cont">
+            <img src="./assets/jpeg/work3.jpg" alt="E-Kart Project Screenshot" />
+            <div class="project-overlay">
+              <a href="#" class="btn btn-primary btn-sm open-project-modal" data-project="ekart">
+                <i class="fas fa-expand"></i> Details
+              </a>
+              <a href="https://github.com/venkateshangamuthu/E-COMMERCE" target="_blank" class="btn btn-outline btn-sm">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">E-Kart | Full-Stack E-Commerce</h3>
+            <p class="project-desc">Spring Boot & React platform handling product catalogs, order processing, secure authentication, and real-time database management.</p>
+            <div class="project-tags">
+              <span class="tech-pill">Spring Boot</span>
+              <span class="tech-pill">Java</span>
+              <span class="tech-pill">MySQL</span>
+              <span class="tech-pill">React</span>
+            </div>
+            <a href="#" class="btn btn-outline btn-sm open-project-modal" data-project="ekart" style="width: 100%;">
+              View Case Study <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2: CareConnect -->
+        <div class="project-card" data-tilt>
+          <div class="card-glare"></div>
+          <div class="project-img-cont">
+            <img src="./assets/jpeg/work1.jpg" alt="CareConnect Project Screenshot" />
+            <div class="project-overlay">
+              <a href="#" class="btn btn-primary btn-sm open-project-modal" data-project="careconnect">
+                <i class="fas fa-expand"></i> Details
+              </a>
+              <a href="https://github.com/venkateshangamuthu/CareConnect" target="_blank" class="btn btn-outline btn-sm">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">CareConnect | AI Orphanage Platform</h3>
+            <p class="project-desc">MERN social impact app connecting donors with orphanages. Integrated NLP AI chatbot to automate routine queries and real-time scheduling.</p>
+            <div class="project-tags">
+              <span class="tech-pill">React</span>
+              <span class="tech-pill">Node.js</span>
+              <span class="tech-pill">MongoDB</span>
+              <span class="tech-pill">AI Chatbot</span>
+            </div>
+            <a href="#" class="btn btn-outline btn-sm open-project-modal" data-project="careconnect" style="width: 100%;">
+              View Case Study <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3: ParentPlus -->
+        <div class="project-card" data-tilt>
+          <div class="card-glare"></div>
+          <div class="project-img-cont">
+            <img src="./assets/jpeg/work1.jpg" alt="ParentPlus Project Screenshot" />
+            <div class="project-overlay">
+              <a href="#" class="btn btn-primary btn-sm open-project-modal" data-project="parentplus">
+                <i class="fas fa-expand"></i> Details
+              </a>
+              <a href="https://github.com/venkateshangamuthu/Parentplus" target="_blank" class="btn btn-outline btn-sm">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">ParentPlus | Elderly Care & Hospital</h3>
+            <p class="project-desc">Accessibility-first MERN application enabling senior citizens to easily book hospital appointments and order medicines online.</p>
+            <div class="project-tags">
+              <span class="tech-pill">React</span>
+              <span class="tech-pill">Express</span>
+              <span class="tech-pill">MongoDB</span>
+              <span class="tech-pill">HealthTech</span>
+            </div>
+            <a href="#" class="btn btn-outline btn-sm open-project-modal" data-project="parentplus" style="width: 100%;">
+              View Case Study <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS MATRIX SECTION -->
+  <section id="skills" style="background: rgba(15, 23, 42, 0.3);">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-subtitle">// TECHNICAL STACK</span>
+        <h2 class="section-title">Skills & <span class="gradient-text">Competencies</span></h2>
+        <p class="section-desc">Languages, frameworks, databases, and developer tooling in my technical arsenal.</p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Programming Languages -->
+        <div class="skill-category-card">
+          <h3 class="skill-cat-title"><i class="fas fa-code"></i> Languages</h3>
+          <div class="skill-items">
+            <div class="skill-chip"><i class="fab fa-java"></i> Java</div>
+            <div class="skill-chip"><i class="fas fa-terminal"></i> C++</div>
+            <div class="skill-chip"><i class="fas fa-terminal"></i> C</div>
+            <div class="skill-chip"><i class="fab fa-js"></i> JavaScript</div>
+            <div class="skill-chip"><i class="fab fa-html5"></i> HTML5 & CSS3</div>
+          </div>
+        </div>
+
+        <!-- Frameworks & Libraries -->
+        <div class="skill-category-card">
+          <h3 class="skill-cat-title"><i class="fas fa-layer-group"></i> Frameworks & Libs</h3>
+          <div class="skill-items">
+            <div class="skill-chip"><i class="fab fa-react"></i> React.js</div>
+            <div class="skill-chip"><i class="fas fa-leaf"></i> Spring Boot</div>
+            <div class="skill-chip"><i class="fab fa-node-js"></i> Node.js</div>
+            <div class="skill-chip"><i class="fas fa-server"></i> Express.js</div>
+          </div>
+        </div>
+
+        <!-- Databases -->
+        <div class="skill-category-card">
+          <h3 class="skill-cat-title"><i class="fas fa-database"></i> Databases</h3>
+          <div class="skill-items">
+            <div class="skill-chip"><i class="fas fa-database"></i> MySQL</div>
+            <div class="skill-chip"><i class="fas fa-leaf"></i> MongoDB</div>
+            <div class="skill-chip"><i class="fas fa-bolt"></i> Redis</div>
+          </div>
+        </div>
+
+        <!-- Tools & DevOps -->
+        <div class="skill-category-card">
+          <h3 class="skill-cat-title"><i class="fas fa-tools"></i> Tools & Cloud</h3>
+          <div class="skill-items">
+            <div class="skill-chip"><i class="fab fa-git-alt"></i> Git & GitHub</div>
+            <div class="skill-chip"><i class="fab fa-docker"></i> Docker</div>
+            <div class="skill-chip"><i class="fab fa-aws"></i> AWS Practitioner</div>
+            <div class="skill-chip"><i class="fas fa-chart-bar"></i> Power BI</div>
+            <div class="skill-chip"><i class="fas fa-cogs"></i> Jenkins & Celery</div>
+          </div>
+        </div>
+
+        <!-- Core Concepts -->
+        <div class="skill-category-card" style="grid-column: span 2;">
+          <h3 class="skill-cat-title"><i class="fas fa-brain"></i> Core Concepts & DSA</h3>
+          <div class="skill-items">
+            <div class="skill-chip"><i class="fas fa-sitemap"></i> Data Structures & Algorithms</div>
+            <div class="skill-chip"><i class="fas fa-network-wired"></i> RESTful API Architecture</div>
+            <div class="skill-chip"><i class="fas fa-cubes"></i> Object-Oriented Programming (OOP)</div>
+            <div class="skill-chip"><i class="fas fa-server"></i> DBMS & Computer Networks</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS & ACHIEVEMENTS SECTION -->
+  <section id="certifications">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-subtitle">// HONORS & CERTIFICATIONS</span>
+        <h2 class="section-title">Certifications & <span class="gradient-text">Coding Profiles</span></h2>
+        <p class="section-desc">Recognized achievements and verified industry credentials.</p>
+      </div>
+
+      <div class="cert-grid">
+        <!-- NPTEL Silver -->
+        <div class="cert-card">
+          <div class="cert-icon"><i class="fas fa-medal"></i></div>
+          <div class="cert-info">
+            <h4>NPTEL Silver Medalist — Programming in Java</h4>
+            <p>Elite + Silver Tier | IIT Kharagpur (Top National Tier)</p>
+          </div>
+        </div>
+
+        <!-- LeetCode Profile -->
+        <div class="cert-card">
+          <div class="cert-icon" style="background: rgba(6, 182, 212, 0.15); color: var(--accent-cyan);">
+            <i class="fas fa-code"></i>
+          </div>
+          <div class="cert-info">
+            <h4>LeetCode — 550+ Solved</h4>
+            <p>Max Rating 1601 | Top 23.32% Solvers Globally</p>
+          </div>
+        </div>
+
+        <!-- CodeChef Profile -->
+        <div class="cert-card">
+          <div class="cert-icon" style="background: rgba(139, 92, 246, 0.15); color: var(--accent-purple);">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <div class="cert-info">
+            <h4>CodeChef — 500+ Solved</h4>
+            <p>Max Rating 1398 | Division 3 (2 Star)</p>
+          </div>
+        </div>
+
+        <!-- IBM Cloud -->
+        <div class="cert-card">
+          <div class="cert-icon"><i class="fas fa-cloud"></i></div>
+          <div class="cert-info">
+            <h4>IBM — Cloud Computing Fundamentals</h4>
+            <p>Verified Industry Credential (2025)</p>
+          </div>
+        </div>
+
+        <!-- Cisco AI & Security -->
+        <div class="cert-card">
+          <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
+          <div class="cert-info">
+            <h4>Cisco — Modern AI, CyberSecurity & Python</h4>
+            <p>Essentials 1 & 2 Certifications (2025–2026)</p>
+          </div>
+        </div>
+
+        <!-- AWS Cloud Practitioner -->
+        <div class="cert-card">
+          <div class="cert-icon"><i class="fab fa-aws"></i></div>
+          <div class="cert-info">
+            <h4>AWS Cloud Practitioner Essentials</h4>
+            <p>Amazon Skill Builder Cloud Credential</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESUME DOWNLOAD SECTION -->
+  <section id="resume" style="background: rgba(15, 23, 42, 0.3);">
+    <div class="container">
+      <div class="resume-box">
+        <span class="section-subtitle">// CURRICULUM VITAE</span>
+        <h2 class="section-title" style="margin-bottom: 12px;">Ready to Review My <span class="gradient-text">Full Resume</span>?</h2>
+        <p class="section-desc" style="margin-bottom: 30px;">Download my official resume PDF containing my detailed experience, project breakdowns, academic coursework, and contact details.</p>
+
+        <div class="resume-preview-card">
+          <a href="./assets/Venkatesh_A_Resume (1).pdf" download="Venkatesh_A_Resume.pdf" class="btn btn-primary" style="padding: 16px 36px; font-size: 1.1rem;">
+            <i class="fas fa-download"></i> Download Resume (PDF)
+          </a>
+          <a href="./assets/Venkatesh_A_Resume (1).pdf" target="_blank" class="btn btn-outline" style="padding: 12px 28px;">
+            <i class="fas fa-external-link-alt"></i> Open in New Tab
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-subtitle">// GET IN TOUCH</span>
+        <h2 class="section-title">Let's Work <span class="gradient-text">Together</span></h2>
+        <p class="section-desc">Open to software engineering internship opportunities, full-stack projects, and technical discussions.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="glass-card">
+          <h3 class="skill-cat-title"><i class="fas fa-paper-plane"></i> Contact Information</h3>
+          <p style="color: var(--text-muted);">Feel free to reach out via email or phone. I'm always excited to discuss new tech projects or career opportunities!</p>
+
+          <div class="contact-info-list">
+            <div class="contact-info-item">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <h5 style="color: var(--text-muted); font-size: 0.85rem;">Email</h5>
+                <a href="mailto:iamvenkateshvk@gmail.com" style="font-weight: 600; font-size: 1rem; color: var(--accent-cyan);">iamvenkateshvk@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+              <div>
+                <h5 style="color: var(--text-muted); font-size: 0.85rem;">Phone / WhatsApp</h5>
+                <a href="tel:+916369000832" style="font-weight: 600; font-size: 1rem;">+91 6369000832</a>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <h5 style="color: var(--text-muted); font-size: 0.85rem;">Location</h5>
+                <p style="font-weight: 600; font-size: 1rem;">Coimbatore, Tamil Nadu, India</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card">
+          <h3 class="skill-cat-title"><i class="fas fa-comment-dots"></i> Send a Message</h3>
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" required class="form-input" placeholder="e.g. John Doe" />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" required class="form-input" placeholder="e.g. john@example.com" />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" required class="form-input" placeholder="Enter your message or project inquiry..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px;">
+              Send Message <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Venkatesh A. Built with Three.js WebGL & Glassmorphic UI.</p>
+    </div>
+  </footer>
+
+  <!-- PROJECT MODAL OVERLAY -->
+  <div class="modal-overlay" id="project-modal">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close"><i class="fas fa-times"></i></button>
+      <div style="margin-bottom: 20px;">
+        <span class="tech-pill" id="modal-category" style="background: rgba(6, 182, 212, 0.15); border-color: var(--accent-cyan); color: var(--accent-cyan);"></span>
+        <h2 id="modal-title" style="font-size: 1.8rem; margin-top: 10px;"></h2>
+      </div>
+
+      <img id="modal-image" src="" alt="Project Preview" style="width: 100%; border-radius: var(--radius-md); max-height: 320px; object-fit: cover; margin-bottom: 24px; border: 1px solid var(--border-glass);" />
+
+      <h4 style="margin-bottom: 8px;">Project Overview</h4>
+      <p id="modal-overview" style="color: var(--text-muted); margin-bottom: 20px;"></p>
+
+      <h4 style="margin-bottom: 8px;">Key Implementation Highlights</h4>
+      <ul id="modal-highlights" style="color: var(--text-muted); padding-left: 20px; margin-bottom: 24px;"></ul>
+
+      <h4 style="margin-bottom: 12px;">Technologies Used</h4>
+      <div id="modal-tags" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 30px;"></div>
+
+      <div style="display: flex; gap: 16px;">
+        <a id="modal-github-link" href="#" target="_blank" class="btn btn-primary btn-sm">
+          <i class="fab fa-github"></i> View GitHub Repository
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast" id="toast-notification">
+    <div class="toast-icon"><i class="fas fa-check-circle"></i></div>
+    <div>
+      <h4 class="toast-title" style="font-size: 0.95rem; font-weight: 700;">Success</h4>
+      <p class="toast-msg" style="font-size: 0.85rem; color: var(--text-muted);"></p>
+    </div>
+  </div>
+
+  <!-- Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- 3D Scene Script -->
+  <script src="js/3d-scene.js"></script>
+  <!-- Main App Script -->
+  <script src="js/app.js"></script>
+</body>
+</html>
